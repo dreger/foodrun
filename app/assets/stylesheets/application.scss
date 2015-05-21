@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require normalize.css/normalize.css
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  max-width: 600px;
+  margin: 3rem auto;
+  color: #3a3a3a;
+  padding: 1rem; 
+}
+
+h1,
+h2,
+h3 {
+  margin: 1rem 0;
+  line-height: 1em;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.header {
+  margin: 1rem 0;
+}
+
+.expired {
+  text-decoration: line-through;
+  color: #d66262;
+}
+
+.order-items {
+  background: #fff1ce;
+  list-style: none;
+  margin: 1rem 0;
+  border-radius: 3px;
+  border-top: none;
+  padding: 0;
+  border: solid 1px #ccc;
+}
+.item {
+  padding: 1rem 1rem 1rem .5rem;
+  margin-left: .5rem;
+  border-bottom: solid 1px #8ccbec;
+  border-left: double #ec9c9c;
+  &:last-child { border-bottom: none; }
+  line-height: 1.4em;
+}
+
+.item-name {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: solid 2px #444;
+  letter-spacing: 1px;
+  font-size: .9rem;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.item-description {
+
+}
+
+.order-items-header {
+  padding: 1rem;
+  background: #fafafa;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: solid 1px #ccc;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+label {
+  border: solid 1px #ccc;
+  padding: .5rem;
+  border-radius: 3px;
+  display: inline-block;
+  margin: .5rem 0;
+  cursor: pointer;
+  &:hover {
+    background: #ffedc5;
+  }
+}
+
+input[type=text] {
+  font-size: 1rem;
+  padding: .75rem;
+  outline: none;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+input[type=submit] {
+  font-size: 1rem;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  border-bottom-width: 2px;
+  background: #fafafa;
+  cursor: pointer;
+  outline: none;
+  padding: .5rem 1rem;
+  margin: .5rem 0;
+  display: inline-block;
+  &:active { background: #eee; }
+}

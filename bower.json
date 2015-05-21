@@ -1,0 +1,24 @@
+{
+  "name": "lunchtime",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Kyle Dreger <kyle@dreger.me>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "simple-line-icons": "~1.0.0",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "countdown": "~2.1.0",
+    "normalize.css": "~3.0.3",
+    "jquery.countdown": "~2.0.4"
+  }
+}

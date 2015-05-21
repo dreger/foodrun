@@ -1,0 +1,41 @@
+{
+  "name": "simple-line-icons",
+  "version": "1.0.0",
+  "authors": [
+    "Sabbir Ahmed <sabbiirr@gmail.com>"
+  ],
+  "description": "Simple Line Icons Bower Package",
+  "keywords": [
+    "fonts",
+    "simple",
+    "simple-line",
+    "icon"
+  ],
+  "main": [
+    "css/simple-line-icons.css",
+    "scss/simple-line-icons.scss",
+    "less/simple-line-icons.less",
+    "fonts/Simple-Line-Icons.eot",
+    "fonts/Simple-Line-Icons.svg",
+    "fonts/Simple-Line-Icons.ttf",
+    "fonts/Simple-Line-Icons.woff"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/thesabbir/simple-line-icons",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "9b702ca0b5115eb250a45f0cb74541fd1bce1c03"
+  },
+  "_source": "git://github.com/thesabbir/simple-line-icons.git",
+  "_target": "~1.0.0",
+  "_originalSource": "simple-line-icons"
+}

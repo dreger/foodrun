@@ -1,0 +1,6 @@
+<%= form_for @item, html: { class: "order-form" }, remote: true do |f| %>
+  <%= f.text_field :description, :placeholder => "What do you want?" %>
+  <%= f.text_field :name, :placeholder => "Name?" %>
+  <%= f.hidden_field :order_id, :value => @order.id %>
+  <%= f.submit "Add to order", :class => "button", data: { disable_with: "Creating order..." } %>
+<% end %>

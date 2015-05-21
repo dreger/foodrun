@@ -1,0 +1,32 @@
+<h1 class="order-title"><%= @order.what %></h1>
+<h2>
+  <span class="order-time-remaining" data-expires-on="<%= @order.expires_on %>"></span>
+  <br><span style="display:none;" class="expired-message">No longer accepting new items for this order.</span>
+</h2>
+
+<%= render 'items/form' %>
+
+<ul class="order-items">
+  <li class="order-items-header">Orders</li>
+  <%= render @items %>
+</ul>
+
+<script type="text/javascript">
+  $(function() {
+    if(<%= @order.expired? %>) { expireForm(); }
+    $(".order-time-remaining").countdown($('.order-time-remaining').data('expiresOn'))
+    .on('update.countdown', function(event) {
+      $(this).html(event.strftime('%M mins %S secs remaining'));
+    })
+    .on('finish.countdown', function(event) {
+      expireForm();
+    })
+  });
+
+  function expireForm() {
+    $('#new_item').hide();
+    $('.expired-message').show();
+    $('.order-time-remaining').html('00 mins 00 secs remaining').addClass('expired');
+  }
+
+</script>

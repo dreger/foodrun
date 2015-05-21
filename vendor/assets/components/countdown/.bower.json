@@ -1,0 +1,31 @@
+{
+  "name": "countdown",
+  "version": "2.1.0",
+  "description": "Simple, lightweight and easy to use countdown plugin",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    },
+    {
+      "type": "GPL",
+      "url": "http://www.opensource.org/licenses/gpl-license.php"
+    }
+  ],
+  "ignore": [
+    "examples/*"
+  ],
+  "dependencies": {
+    "jQuery": ">=1.7.2"
+  },
+  "homepage": "https://github.com/rendro/countdown",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.0",
+    "commit": "897051a5fc8e1e6545d323b65a0485b3d1b03bcf"
+  },
+  "_source": "git://github.com/rendro/countdown.git",
+  "_target": "~2.1.0",
+  "_originalSource": "countdown"
+}

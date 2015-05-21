@@ -1,0 +1,28 @@
+
+
+<%= form_for @order, html: { class: "order-form" } do |f| %>
+  <%= f.text_field :what, :placeholder => "What are you ordering? Coffee, Chinese, etc." %>
+
+  <p>When are you leaving?</p>
+  <%= f.label :expires_in, '1 minute', :value => '60' do %>
+  <%= radio_button("order", "expires_in", "60", :checked => true) %> 1 minute
+  <% end %>
+
+  <%= f.label :expires_in, '5 minutes', :value => '300' do %>
+  <%= radio_button("order", "expires_in", "300") %> 5 minutes
+  <% end %>
+
+  <%= f.label :expires_in, '10 minutes', :value => '600' do %>
+  <%= radio_button("order", "expires_in", "600") %> 10 minutes
+  <% end %>
+
+  <%= f.label :expires_in, '30 minutes', :value => '1800' do %>
+  <%= radio_button("order", "expires_in", "1800") %> 30 minutes
+  <% end %>
+
+  <%= f.label :expires_in, '1 hour', :value => '3600' do %>
+  <%= radio_button("order", "expires_in", "3600") %> 1 hour
+  <% end %>
+
+  <%= f.submit "Get lunching!", :class => "button", data: { disable_with: "Creating order..." } %>
+<% end %>
