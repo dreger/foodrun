@@ -1,22 +1,31 @@
 <h1 class="order-title"><%= @order.what %></h1>
 <h2>
   <span class="order-time-remaining" data-expires-on="<%= @order.expires_on %>"></span>
-  <br><span style="display:none;" class="expired-message">No longer accepting new items for this order.</span>
 </h2>
 
-<%= render 'items/form' %>
+<p style="display:none;" class="expired-message"><strong>This order is now closed</strong>. Make a <a href="/">new order</a>?</p>
+<p class="order-tip hide-on-expires"><strong>Tip:</strong> Take orders by sharing <%= link_to "this URL", @order %> over email or  chat.</p>
+
 
 <ul class="order-items">
-  <li class="order-items-header">Orders</li>
+  <li class="order-items-header hide-on-expires">#1: Enter your order</li>
+  <%= render 'items/form' %>
+  <li class="order-items-header">#2: View order summary</li>
   <%= render @items %>
 </ul>
+
+
+<footer class="footer">
+  <p><strong>Order #<%= @order.id %></strong> from Food Run &mdash; Lunching made simple. <a href="/">New order?</a></p>
+</footer>
 
 <script type="text/javascript">
   $(function() {
     if(<%= @order.expired? %>) { expireForm(); }
+    $('#item_name').focus();
     $(".order-time-remaining").countdown($('.order-time-remaining').data('expiresOn'))
     .on('update.countdown', function(event) {
-      $(this).html(event.strftime('%M mins %S secs remaining'));
+      $(this).html(event.strftime('%M:%S remaining to place your order'));
     })
     .on('finish.countdown', function(event) {
       expireForm();
@@ -24,7 +33,7 @@
   });
 
   function expireForm() {
-    $('#new_item').hide();
+    $('#new_item, .hide-on-expires').hide();
     $('.expired-message').show();
     $('.order-time-remaining').html('00 mins 00 secs remaining').addClass('expired');
   }

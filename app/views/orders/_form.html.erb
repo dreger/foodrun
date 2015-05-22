@@ -1,28 +1,29 @@
 
 
 <%= form_for @order, html: { class: "order-form" } do |f| %>
-  <%= f.text_field :what, :placeholder => "What are you ordering? Coffee, Chinese, etc." %>
+  <h2>We are ordering</h2>
+  <%= f.text_field :what, :placeholder => "Coffee, Chinese, Subs, Fondue, etc.", :autocomplete => "off" %>
 
-  <p>When are you leaving?</p>
-  <%= f.label :expires_in, '1 minute', :value => '60' do %>
+  <h2>in about</h2>
+  <%= f.label :expires_in, '1 minute', :class => 'radio-labels', :value => '60' do %>
   <%= radio_button("order", "expires_in", "60", :checked => true) %> 1 minute
   <% end %>
 
-  <%= f.label :expires_in, '5 minutes', :value => '300' do %>
+  <%= f.label :expires_in, '5 minutes', :class => 'radio-labels', :value => '300' do %>
   <%= radio_button("order", "expires_in", "300") %> 5 minutes
   <% end %>
 
-  <%= f.label :expires_in, '10 minutes', :value => '600' do %>
+  <%= f.label :expires_in, '10 minutes', :class => 'radio-labels', :value => '600' do %>
   <%= radio_button("order", "expires_in", "600") %> 10 minutes
   <% end %>
 
-  <%= f.label :expires_in, '30 minutes', :value => '1800' do %>
+  <%= f.label :expires_in, '30 minutes', :class => 'radio-labels', :value => '1800' do %>
   <%= radio_button("order", "expires_in", "1800") %> 30 minutes
   <% end %>
 
-  <%= f.label :expires_in, '1 hour', :value => '3600' do %>
+  <%= f.label :expires_in, '1 hour', :class => 'radio-labels', :value => '3600' do %>
   <%= radio_button("order", "expires_in", "3600") %> 1 hour
   <% end %>
 
-  <%= f.submit "Get lunching!", :class => "button", data: { disable_with: "Creating order..." } %>
+  <%= f.submit "Start taking orders!", :class => "button", data: { disable_with: "Creating order..." } %>
 <% end %>

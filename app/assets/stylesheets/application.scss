@@ -27,7 +27,7 @@ body {
   max-width: 600px;
   margin: 3rem auto;
   color: #3a3a3a;
-  padding: 1rem; 
+  padding: 1rem;
 }
 
 h1,
@@ -41,8 +41,12 @@ h2 {
   font-weight: normal;
 }
 
-.header {
-  margin: 1rem 0;
+.footer {
+  margin: 2rem 0;
+  color: #888;
+  a {
+    color: #888;
+  }
 }
 
 .expired {
@@ -78,18 +82,14 @@ h2 {
   line-height: 1em;
 }
 
-.item-description {
-
-}
-
 .order-items-header {
   padding: 1rem;
   background: #fafafa;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  // letter-spacing: 1px;
+  // text-transform: uppercase;
   border-bottom: solid 1px #ccc;
   font-size: 1rem;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 label {
@@ -113,10 +113,17 @@ input[type=text] {
   display: block;
   width: 100%;
   margin: 1rem 0;
+  &:focus {
+    border-color: #aa6092;
+  }
 }
 
-input[type=submit] {
-  font-size: 1rem;
+.order-tip {
+  color: #888;
+}
+
+.button {
+  font-size: 1.25rem;
   border-radius: 3px;
   border: solid 1px #ccc;
   border-bottom-width: 2px;
@@ -124,7 +131,20 @@ input[type=submit] {
   cursor: pointer;
   outline: none;
   padding: .5rem 1rem;
-  margin: .5rem 0;
+  margin: 1rem 0;
   display: inline-block;
   &:active { background: #eee; }
+}
+
+.new_item {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  border-bottom: solid 1px #ccc;
+}
+
+.button-add {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
 }
