@@ -18,8 +18,8 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails', '~> 4.0'
   gem 'simplecov', :require => false
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development, :test do

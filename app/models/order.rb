@@ -25,6 +25,3 @@ class Order < ActiveRecord::Base
     end
   end
 end
-
-
-# TODO: We need to get the epoch seconds thing working!
