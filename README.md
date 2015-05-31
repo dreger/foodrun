@@ -1,8 +1,8 @@
-# FoodRun, group food orders made simple
+# [FoodRun](http://foodrun.kyledreger.com/), group food orders made simple
 
 Our company lunch orders were hectic, so I made a simple little Rails app to help! Just enter what you're ordering and when you're going to call, and then share the unique URL via email or chat.
 
-See a [demo of FoodRun here](http://rails-beanstalk-env-whtsmmfrqr.elasticbeanstalk.com/). See some [discussion on Designer News](https://news.layervault.com/stories/49871-show-dn-group-lunch-orders-were-hectic-so-i-made-food-run).
+See a [demo of FoodRun here](http://foodrun.kyledreger.com/). See some [discussion on Designer News](https://news.layervault.com/stories/49871-show-dn-group-lunch-orders-were-hectic-so-i-made-food-run).
 
 Feel free to submit pull requests or issues, thanks!
 
