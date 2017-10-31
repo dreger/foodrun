@@ -2,7 +2,7 @@
 
 <%= form_for @order, html: { class: "order-form" } do |f| %>
   <h2>We are ordering</h2>
-  <%= f.text_field :what, :placeholder => "Coffee, Chinese, Subs, Fondue, etc.", :autocomplete => "off" %>
+  <%= f.text_field :what, :placeholder => "Pak Gembus, Kambal, etc", :autocomplete => "off" %>
 
   <h2>in about</h2>
   <%= f.label :expires_in, '1 minute', :class => 'radio-labels', :value => '60' do %>
