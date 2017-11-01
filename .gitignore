@@ -20,3 +20,9 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+app.yaml
+/public/assets/*.js
+/public/assets/*.css
+/public/assets/*.gz
+/public/assets/*.json
+
